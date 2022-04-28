@@ -17,6 +17,7 @@ function Filter({setActiveGenre, activeGenre, setFiltered, popular}) {
         <button className={activeGenre === 0 ? "active" : ""} onClick={() => setActiveGenre(0)} >All</button>
         <button className={activeGenre === 16 ? "active" : ""} onClick={() => setActiveGenre(16)}>Animations</button>
         <button className={activeGenre === 80 ? "active" : ""} onClick={() => setActiveGenre(80)}>Crimes</button>
+        <button className={activeGenre === 18 ? "active" : ""} onClick={() => setActiveGenre(18)}>Drama</button>
     </div>  
   )
 }

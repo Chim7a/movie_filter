@@ -1,13 +1,17 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Filter from './components/features/Buttons/Filter';
+import Filter from './components/view/Buttons/Filter';
 import Movie from './components/view/Movie';
+import {motion, AnimatePresence} from "framer-motion";
+import Navigation from './components/view/Navigation/Navigation';
+// import SearchInput from './components/features/SearchInput/SearchInput';
 
 function App() {
 
   const [popular, setPopular] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [activeGenre, setActiveGenre] = useState(0);
+  // const [search, setSearch] = useState("");
   
 
   useEffect (() => {
@@ -20,21 +24,33 @@ function App() {
     const movies = await data.json();
     setPopular(movies.results);
     setFiltered(movies.results);
+    // setSearch(movies.results);
   }; 
 
   return (
     <div className="App">
+      {/* <SearchInput 
+      search={search} 
+      setSearch={setSearch} 
+      popular={popular} 
+      setFiltered={setFiltered} 
+      /> */}
+      <Navigation />
+      <div className="popular-movies filter">
       <Filter 
       popular={popular} 
       setFiltered={setFiltered} 
       activeGenre={activeGenre} 
       setActiveGenre={setActiveGenre} 
       />
-    <div className="popular-movies">
+      </div>
+    <motion.div layout className="popular-movies">
+      <AnimatePresence>
       {filtered.map((movie) => {
         return( <Movie key={movie.id} movie={movie} />)
       })};
-    </div> 
+      </AnimatePresence>
+    </motion.div> 
     </div>
   );
 }
