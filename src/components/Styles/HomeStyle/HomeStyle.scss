@@ -1,0 +1,15 @@
+.home{
+    height: 80vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(19, 33, 73);
+
+    img {
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
+        object-fit: cover;
+        height: 80vh;
+        opacity: 0.5;
+    }
+}
+

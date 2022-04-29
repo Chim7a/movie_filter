@@ -14,10 +14,10 @@
           align-items: center;
   position: -webkit-sticky;
   position: sticky;
+  z-index: 100;
   top: 0;
   height: auto;
-  width: 100%;
-  margin-bottom: 10px;
+  width: 100vw;
   color: white;
   background-color: #132149;
 }
@@ -26,8 +26,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 30vw;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 .nav .nav__container {
@@ -41,8 +40,21 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #132149;
-  padding: 0 20px;
+}
+
+.nav .nav__sign__up {
+  padding-right: 40px;
+}
+
+.nav .nav__list {
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 100px;
 }
 
 .nav ul {

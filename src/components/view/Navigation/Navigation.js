@@ -5,13 +5,13 @@ import '../../Styles/NavStyle/NavStyle.css';
 function Navigation() {
   return (
     <div className="nav">
-        
-            <div className="nav__logo">
-                <h1>Movie-House</h1>
-            </div>
             <div className="nav__container">
-            <div className="nav__list">
-                <ul>
+            <div className="nav__logo">
+                <h1>Flix <span style={{fontWeight:"900", color:"red", fontSize:"2rem" }}>.</span> </h1>
+            </div>
+            
+            <div className="nav__left">
+                <ul className="nav__list">
                     <li>Home</li>
                     <li>Movies</li>
                     <li>Celebrities</li>

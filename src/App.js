@@ -4,6 +4,7 @@ import Filter from './components/view/Buttons/Filter';
 import Movie from './components/view/Movie';
 import {motion, AnimatePresence} from "framer-motion";
 import Navigation from './components/view/Navigation/Navigation';
+import Home from './components/view/Home/Home';
 // import SearchInput from './components/features/SearchInput/SearchInput';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       setFiltered={setFiltered} 
       /> */}
       <Navigation />
+      <Home />
       <div className="popular-movies filter">
       <Filter 
       popular={popular} 

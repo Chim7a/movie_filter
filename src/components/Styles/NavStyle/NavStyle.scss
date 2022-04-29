@@ -11,17 +11,16 @@ $PrimaryBgColor: rgb(19, 33, 73);
     justify-content: flex-start;
     align-items: center;
     position: sticky;
+    z-index: 100;
     top: 0;
     height: auto;
-    width: 100%;
-    margin-bottom: 10px;
+    width: 100vw;
     color: white;
     background-color: $PrimaryBgColor;
 
     .nav__logo {
         display: flex;
-        width: 30vw;
-        padding-left: 20px;
+        padding-left: 40px;
     }
     
     .nav__container {
@@ -29,12 +28,17 @@ $PrimaryBgColor: rgb(19, 33, 73);
         justify-content: space-between;
         width: 100vw;
         align-items: center;
-        background-color: $PrimaryBgColor;
-        padding: 0 20px;
     }
 
     .nav__sign__up {
+        padding-right: 40px;
+    }
 
+    .nav__list {
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+        gap: 100px;
     }
 
     ul {
