@@ -4,15 +4,14 @@ import Filter from './components/view/Buttons/Filter';
 import Movie from './components/view/Movie';
 import {motion, AnimatePresence} from "framer-motion";
 import Navigation from './components/view/Navigation/Navigation';
-import Home from './components/view/Home/Home';
-// import SearchInput from './components/features/SearchInput/SearchInput';
+// import Home from './components/view/Home/Home';
 
 function App() {
 
   const [popular, setPopular] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [activeGenre, setActiveGenre] = useState(0);
-  // const [search, setSearch] = useState("");
+
   
 
   useEffect (() => {
@@ -25,19 +24,13 @@ function App() {
     const movies = await data.json();
     setPopular(movies.results);
     setFiltered(movies.results);
-    // setSearch(movies.results);
+
   }; 
 
   return (
     <div className="App">
-      {/* <SearchInput 
-      search={search} 
-      setSearch={setSearch} 
-      popular={popular} 
-      setFiltered={setFiltered} 
-      /> */}
       <Navigation />
-      <Home />
+      {/* <Home /> */}
       <div className="popular-movies filter">
       <Filter 
       popular={popular} 
